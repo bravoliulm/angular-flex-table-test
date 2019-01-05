@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myController">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>可编辑表格</title>
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ng-app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/controller.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/table.css"/>
+	</head>
+	<body>
+		<div>
+		
+			<div class="mb5" style="padding-bottom: 8px;border-bottom:1px solid #dcdcdc">
+				<label>请输入表名:</label>
+				<input style="border: 1px solid #dcdcdc;" ng-model="tableName">
+			</div>
+			<ul class="operabox">
+				<li><button class="gridbtn gridbtn-info" ng-click="addRow()"><i class="glyphicon glyphicon-chevron-down"></i>添加一行</button></li>
+				<li><button class="gridbtn gridbtn-info" ng-click="delRow()"><i class="glyphicon glyphicon-chevron-up"></i>删除一行</button></li>
+				<li><button class="gridbtn gridbtn-info" ng-click="addColumn()">  <i class="glyphicon glyphicon-arrow-right"></i>添加一列 </button></li>
+				<li><button class="gridbtn gridbtn-info" ng-click="delColumn()"><i class="glyphicon glyphicon-arrow-left"></i>删除一列</button></li>
+			</ul>
+				
+				
+			<div style="height: 800px;overflow: scroll;">
+				<table id="tableData" class="table table-bordered mytable">
+					<tr class="mytr">
+						<td  class="mytd"></td>
+						<td ng-repeat="b in colData track by $index" class="mytd">
+							<button class='gridbtn colbtn' ng-click='selectColumn(this)'>列{{$index +1}} </button>
+						</td>
+					</tr>
+					<tr   ng-repeat="r in rowData track by $index" class="mytr">
+						<td class="mytr" ng-show="false" ng-bind="rowIndex={{$index}}"></td>
+						<td   class="mytd">
+							<button  class='gridbtn colbtn' ng-click='selectRow(this)'>行{{ rowIndex+1 }}</button>
+						</td>
+						<td ng-repeat="r1 in colData track by $index"  class="mytd">
+							<input type='text' class='input-control'  ng-model="values[rowIndex][$index]">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+	
+</html>
