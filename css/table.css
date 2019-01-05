@@ -1,0 +1,99 @@
+.mytable {
+    background-color: #eee;
+}
+.mytable .mytr .mytd{
+    padding: 0 !important;
+    text-align: center;
+}
+.mytable .mytr:nth-child(1){
+    background-color: #fff;
+}
+
+
+.mytable .mytr .mytd:nth-child(2) {
+    background-color: #fff;
+}
+
+/*.mytr:hover {
+    background-color: #459eda;
+    border-color: #459eda;
+}*/
+
+
+
+/*
+.mytr:nth-child(odd) {
+    background: #f5f5f5;
+}
+*/
+
+/* tr td:hover { background: #666; color: #FFF; }  */
+
+.button-panel {
+    margin: 0 auto;
+    background-color:#fae596;
+    /*   border: 1px solid crimson; */
+    border-radius: 6px;
+    padding: 10px;
+    width: 38%;
+    margin-top: 10px
+}
+
+
+.input-control {
+    height: 30px;
+    width: 80px;
+    display: inline-block;
+    border: 0px  #cccccc;
+    border-radius: 4px;
+    vertical-align: middle;
+    background-color:transparent;
+}
+
+
+.gridbtn {
+    background-color: transparent;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.gridbtn-info:hover {
+    background-color: #459eda;
+    border-color: #459eda;
+}
+
+.gridbtn-info {
+    color: rgba(81,130,228,1);
+    background-color: #ffffff;
+    border-color: rgba(81,130,228,1);
+    font-size: 12px;
+}
+.mytable > thead > tr > th,
+.mytable > tbody > tr > th,
+.mytable > tfoot > tr > th,
+.mytable > thead > tr > td,
+.mytable > tbody > tr > td,
+.mytable > tfoot > tr > td {
+    border: 1px solid #dcdcdc;
+}
+
+
+
+.operabox {
+    display: flex;
+    margin-bottom: 10px;
+	margin-left: 30px;
+}
+.operabox li {
+    margin-left: 30px;
+}
